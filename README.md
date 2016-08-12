@@ -1,1 +1,3 @@
 # pokedex
+
+Aplikasi ensiklopedia pokemon
