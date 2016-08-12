@@ -94,6 +94,7 @@ class App extends React.Component {
 		)
 	}
 
+	/*fungsi untuk next dan previous data pokemon list*/
 	nextPage(url = "http://pokeapi.co/api/v2/pokemon/?limit=10&offset=0") {
 		Request.get(url).then((response) => {
 			this.setState({
@@ -105,6 +106,7 @@ class App extends React.Component {
 		});
 	}
 
+	/*fungsi untuk menampilkan data detail pokemon*/
 	pokemonDetail(urlDetail) {
 		Request.get(urlDetail).then((response) => {
 			this.setState({
@@ -119,6 +121,7 @@ class App extends React.Component {
 		});
 	}
 
+	/*fungsi untuk menampilkan filter habitat*/
 	filterList() {
 		var url = "http://pokeapi.co/api/v2/pokemon-habitat/";
 		Request.get(url).then((response) => {
@@ -128,6 +131,7 @@ class App extends React.Component {
 		});
 	}
 
+	/*fungsi untuk mem filter berdasarkan habitat*/
 	filterPokemon(habitatUrl) {
 		Request.get(habitatUrl).then((response) => {
 			this.setState({
